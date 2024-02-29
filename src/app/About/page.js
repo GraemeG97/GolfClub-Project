@@ -18,7 +18,7 @@ export default function Page() {
       <h3>The Essence of Quality:</h3>
       <p>
         We understand that the right golf club can make all the difference
-        between a good game and an exceptional one. That's why we meticulously
+        between a good game and an exceptional one. That is why we meticulously
         select only the highest quality golf clubs from renowned manufacturers
         and craftsmen around the world. From forged irons to
         precision-engineered drivers, each club featured on our website embodies
@@ -36,7 +36,7 @@ export default function Page() {
         At our website, we believe that every golfer deserves access to the
         finest equipment to help them achieve their full potential on the
         course. Explore our collection of premium golf clubs and experience the
-        difference for yourself. Whether you're striving for precision, power,
+        difference for yourself. Whether you are striving for precision, power,
         or performance, we have the perfect club to take your game to the next
         level.
       </p>
