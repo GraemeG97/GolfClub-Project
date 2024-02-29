@@ -11,6 +11,9 @@ export default function Nav() {
           <Link href="/about">About</Link>
         </li>
         <li className="m-4">
+          <Link href="/golf-clubs">Golf Clubs</Link>
+        </li>
+        <li className="m-4">
           <Link href="add-golf-club">Add Your Fav Golf Club</Link>
         </li>
       </ol>
