@@ -1,22 +1,34 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Nav() {
   return (
-    <div>
-      <ol className="flex flex-row p-3">
-        <li className="m-4">
-          <Link href="/">Home</Link>
-        </li>
-        <li className="m-4">
-          <Link href="/about">About</Link>
-        </li>
-        <li className="m-4">
-          <Link href="/golf-clubs">Golf Clubs</Link>
-        </li>
-        <li className="m-4">
-          <Link href="add-golf-club">Add Your Fav Golf Club</Link>
-        </li>
-      </ol>
-    </div>
+    <nav class="flex items-center justify-between px-6">
+      <div class="flex items-center space-x-4">
+        <Link href="/">
+          <Image
+            className=" rounded-lg"
+            src="/SwingStickCritic.jpg"
+            height={300}
+            width={300}
+            alt="Logo and name of blog"
+          />
+        </Link>
+
+        <div class="flex items-center space-x-6">
+          <Link href="/About" className="text-gray-700 hover:text-gray-900">
+            About
+          </Link>
+
+          <Link href="/GolfClubs" className="text-gray-700 hover:text-gray-900">
+            Golf Clubs
+          </Link>
+
+          <Link href="posts" className="text-gray-700 hover:text-gray-900">
+            Posts
+          </Link>
+        </div>
+      </div>
+    </nav>
   );
 }
