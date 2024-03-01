@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Nav() {
   return (
-    <nav class="flex items-center justify-between px-6">
-      <div class="flex items-center space-x-4">
+    <nav className="flex items-center justify-between px-6">
+      <div className="flex items-center space-x-4">
         <Link href="/">
           <Image
             className=" rounded-lg"
@@ -15,7 +15,7 @@ export default function Nav() {
           />
         </Link>
 
-        <div class="flex items-center space-x-6">
+        <div className="flex items-center space-x-6 ml-auto">
           <Link href="/About" className="text-gray-700 hover:text-gray-900">
             About
           </Link>
