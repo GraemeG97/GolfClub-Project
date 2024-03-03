@@ -20,7 +20,10 @@ export default function Nav() {
             About
           </Link>
 
-          <Link href="/GolfClubs" className="text-gray-700 hover:text-gray-900">
+          <Link
+            href="/golf-clubs"
+            className="text-gray-700 hover:text-gray-900"
+          >
             Golf Clubs
           </Link>
 
