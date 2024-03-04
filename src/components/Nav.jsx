@@ -26,6 +26,10 @@ export default function Nav() {
           >
             Golf Clubs
           </Link>
+
+          <Link href="/add-club" className="text-gray-700 hover:text-gray-900">
+            Add Club
+          </Link>
         </div>
       </div>
     </nav>
