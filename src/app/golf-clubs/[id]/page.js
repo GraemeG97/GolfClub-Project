@@ -1,27 +1,28 @@
+import { sql } from "@vercel/postgres";
 import Link from "next/link";
 import Image from "next/image";
-import { revalidatePath } from "next/cache";
 
-export default async function AddPosts({ params }) {
-  const [club] = (
-    await sql`SELECT * FROM golf_equipment WHERE id =${params.id}`
-  ).rows;
-
-  revalidatePath("/golf-clubs/[id]", "page");
-
+export default async function Page({ params }) {
+  const club = (await sql`SELECT * FROM golf_equipment WHERE id = ${params.id}`)
+    .rows[0];
+  // console.log(books)
   return (
-    <div>
-      <h1>Golf Club Reviews</h1>
-      <h2>{club.name}</h2>
-      <Image
-        className="rounded-lg"
-        src={club.Imageurl}
-        height={200}
-        width={200}
-        alt="Image of the specific golf club we are reviewing"
-      />
-      <h2>Price: {club.Price}</h2>
+    <div className="flex flex-col text-center items-center">
+      <div>
+        <h2>{club.name}</h2>
+      </div>
+      {club.imageurl && (
+        <Image
+          src={club.imageurl}
+          width={300}
+          height={500}
+          alt="Image of specific golf club we are reviewing"
+        />
+      )}
+      <br />
       <p>{club.description}</p>
+      <br></br>
+      <p>{club.price}</p>
     </div>
   );
 }

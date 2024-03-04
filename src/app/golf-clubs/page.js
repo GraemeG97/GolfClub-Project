@@ -1,21 +1,23 @@
 import { sql } from "@vercel/postgres";
-import { revalidatePath } from "next/cache";
 import Link from "next/link";
 
-export default async function GolfClubs() {
-  const clubs = await sql`SELECT * FROM golf_equipment`;
-  revalidatePath("/golf-clubs");
+export default async function Page() {
+  const clubs = (await sql`SELECT * FROM golf_equipment`).rows;
 
   return (
     <div>
-      <h1>Golf Club Reviews</h1>
-      {clubs.rows.map((club) => (
-        <div key={club.golf_equipment_id}>
-          <Link href={`/clubs/${club.golf_equipment_id}`}>
-            <h3>{club.golf_equipment_name}</h3>
-          </Link>
-        </div>
-      ))}
+      <h1>Golf Club Reviews:</h1>
+      <div className="flex flex-row flex-wrap">
+        {clubs.map((club) => (
+          <div key={club.id} className="m-8">
+            <h3>{club.name}</h3>
+            <p>{club.type}</p>
+            <Link href={`/golf-clubs/${club.id}`} className="text-blue-500">
+              Read More
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

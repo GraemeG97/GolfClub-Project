@@ -26,10 +26,6 @@ export default function Nav() {
           >
             Golf Clubs
           </Link>
-
-          <Link href="posts" className="text-gray-700 hover:text-gray-900">
-            Posts
-          </Link>
         </div>
       </div>
     </nav>
