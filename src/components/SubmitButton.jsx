@@ -8,7 +8,7 @@ export default function SubmitButton({ thing }) {
     <button
       disabled={pending}
       type="submit"
-      className="bg-amber-400 m-8 rounded-md w-24"
+      className="bg-green-600 m-8 rounded-md w-24"
     >
       {pending ? `Adding ${thing}...` : `Add ${thing}`}
     </button>

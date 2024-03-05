@@ -24,53 +24,51 @@ export default async function Page() {
   return (
     <div>
       <div className="mt-6 mb-6 flex justify-center">
-        <h2 className="text-xl">Add Golf Club Review</h2>
+        <h2 className="text-xl font-extrabold">Add Golf Club Review</h2>
       </div>
       <div className="flex justify-center">
-        <div className="w-96 h-full flex justify-center bg-teal-700 rounded-lg">
+        <div className="w-96 h-full flex justify-center bg-gray-700 rounded-lg">
           <form
             action={handleAddClub}
-            className=" w-80 flex flex-col justify-center"
+            className="w-80 flex flex-col justify-center"
           >
-            <label className="text-slate-100 mt-2 mb-2">
-              Name of Golf Club
-            </label>
+            <label className="text-white mt-2 mb-2">Name of Golf Club</label>
             <input
               className="px-1 rounded text-gray-700"
               name="name"
               placeholder="Name"
             />
 
-            <label className="text-slate-100 mt-2 mb-2">Price</label>
+            <label className="text-white mt-2 mb-2">Price</label>
             <input
               className="px-1 rounded text-gray-700"
               name="price"
               placeholder="e.g 299.00"
             />
 
-            <label className="text-slate-100 mt-2 mb-2">
-              Review/Description
-            </label>
+            <label className="text-white mt-2 mb-2">Review/Description</label>
             <input
               className="px-1 rounded text-gray-700"
               name="description"
               placeholder="review of club"
             />
 
-            <label className="text-slate-100 mt-2 mb-2">Image URL</label>
+            <label className="text-white mt-2 mb-2">Image URL</label>
             <input
               className="px-1 rounded text-gray-700"
               name="imageurl"
               placeholder="paste in web address of image"
             />
 
-            <label className="text-slate-100 mt-2 mb-2">Type of Club</label>
+            <label className="text-white mt-2 mb-2">Type of Club</label>
             <input
               className="px-1 rounded text-gray-700"
               name="type"
               placeholder="Driver or Putter etc"
             />
-            <SubmitButton thing="club" />
+            <div className="flex justify-center mt-4">
+              <SubmitButton thing="club" />
+            </div>
           </form>
         </div>
       </div>
